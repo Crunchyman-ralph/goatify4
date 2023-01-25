@@ -1,0 +1,3 @@
+mutation InjectProductInShopify($shopId: String!, $productInputId: String!) {
+  injectProductInShopify(shopId: $shopId, productInputId: $productInputId)
+}

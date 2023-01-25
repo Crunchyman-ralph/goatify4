@@ -1,0 +1,13 @@
+mutation CategoryCreate($data: CategoryCreateInput!) {
+  categoryCreate(data: $data) {
+    id_
+    name
+  }
+}
+
+mutation CategoryDelete($categoryDeleteId: String!) {
+  categoryDelete(id: $categoryDeleteId) {
+    id_
+    name
+  }
+}

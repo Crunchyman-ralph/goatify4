@@ -1,0 +1,5 @@
+mutation CreateSubProduct($productInputId: String!) {
+  createSubProduct(productInputId: $productInputId) {
+    id_
+  }
+}

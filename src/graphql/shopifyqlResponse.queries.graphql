@@ -1,0 +1,26 @@
+query ShopifyqlResponse($query: String!, $shopId: String!) {
+  shopifyqlResponse(query: $query, shopId: $shopId) {
+    tableData {
+      rowData
+      columns {
+        dataType
+        displayName
+        name
+      }
+    }
+    parseErrors {
+      code
+      message
+      range {
+        end {
+          line
+          character
+        }
+        start {
+          character
+          line
+        }
+      }
+    }
+  }
+}

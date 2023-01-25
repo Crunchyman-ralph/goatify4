@@ -1,0 +1,11 @@
+.next
+.cache
+.husky
+public
+node_modules
+next-env.d.ts
+next.config.ts
+yarn.lock
+.env
+.env.local
+_generated_

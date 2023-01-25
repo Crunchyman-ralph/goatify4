@@ -1,0 +1,66 @@
+query SubProducts($productInputId: String!, $skip: Int, $take: Int) {
+  subProducts(productInputId: $productInputId, skip: $skip, take: $take) {
+    nodes {
+      id_
+      customProductType
+      descriptionHtml
+      giftCard
+      handle
+      images {
+        id_
+        altText
+        src
+      }
+      options
+      productType
+      requiresSellingPlan
+      seo {
+        id_
+        description
+        title
+      }
+      standardizedProductType {
+        id_
+        productTaxonomyNodeId
+      }
+      status
+      tags
+      templateSuffix
+      title
+      variants {
+        id_
+        barcode
+        compareAtPrice
+        fulfillmentServiceId
+        harmonizedSystemCode
+        imageId
+        imageSrc
+        inventoryItem {
+          id_
+          cost
+          tracked
+        }
+        inventoryManagement
+        inventoryPolicy
+        inventoryQuantities {
+          id_
+          availableQuantity
+          locationId
+        }
+        mediaSrc
+        options
+        price
+        productId
+        requiresShipping
+        sku
+        taxCode
+        taxable
+        title
+        weight
+        weightUnit
+      }
+      vendor
+    }
+    total
+  }
+}

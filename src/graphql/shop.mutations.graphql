@@ -1,0 +1,26 @@
+mutation ShopCreate($data: ShopCreateInput!) {
+  shopCreate(data: $data) {
+    id_
+    name
+    url
+    accessToken
+  }
+}
+
+mutation ShopUpdate($data: ShopUpdateInput!) {
+  shopUpdate(data: $data) {
+    id_
+    name
+    url
+    accessToken
+  }
+}
+
+mutation ShopDelete($shopDeleteId: String!) {
+  shopDelete(id: $shopDeleteId) {
+    id_
+    name
+    url
+    accessToken
+  }
+}

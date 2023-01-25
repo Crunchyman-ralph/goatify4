@@ -1,0 +1,138 @@
+mutation ProductInputCreate($data: ProductInputCreateInput!) {
+  productInputCreate(data: $data) {
+    id_
+    customProductType
+    descriptionHtml
+    giftCard
+    handle
+    images {
+      id_
+      altText
+      src
+    }
+    options
+    productType
+    requiresSellingPlan
+    seo {
+      id_
+      description
+      title
+    }
+    standardizedProductType {
+      id_
+      productTaxonomyNodeId
+    }
+    status
+    tags
+    templateSuffix
+    title
+    variants {
+      id_
+      barcode
+      fulfillmentServiceId
+      harmonizedSystemCode
+      imageId
+      imageSrc
+      inventoryItem {
+        id_
+        cost
+        tracked
+      }
+      inventoryManagement
+      inventoryPolicy
+      inventoryQuantities {
+        id_
+        availableQuantity
+        locationId
+      }
+      mediaSrc
+      options
+      price
+      productId
+      requiresShipping
+      sku
+      taxCode
+      taxable
+      title
+      weight
+      weightUnit
+    }
+    vendor
+    creativeUrls
+    adCopies
+    competitorUrls
+  }
+}
+
+mutation ProductInputUpdate($updateData: ProductInputUpdateInput!) {
+  productInputUpdate(data: $updateData) {
+    id_
+    customProductType
+    descriptionHtml
+    giftCard
+    handle
+    images {
+      id_
+      altText
+      src
+    }
+    options
+    productType
+    requiresSellingPlan
+    seo {
+      id_
+      description
+      title
+    }
+    standardizedProductType {
+      id_
+      productTaxonomyNodeId
+    }
+    status
+    tags
+    templateSuffix
+    title
+    variants {
+      id_
+      barcode
+      compareAtPrice
+      fulfillmentServiceId
+      harmonizedSystemCode
+      imageId
+      imageSrc
+      inventoryItem {
+        id_
+        cost
+        tracked
+      }
+      inventoryManagement
+      inventoryPolicy
+      inventoryQuantities {
+        id_
+        availableQuantity
+        locationId
+      }
+      mediaSrc
+      options
+      price
+      productId
+      requiresShipping
+      sku
+      taxCode
+      taxable
+      title
+      weight
+      weightUnit
+    }
+    vendor
+    creativeUrls
+    adCopies
+    competitorUrls
+  }
+}
+
+mutation ProductInputDelete($productInputDeleteId: String!) {
+  productInputDelete(id: $productInputDeleteId) {
+    id_
+  }
+}

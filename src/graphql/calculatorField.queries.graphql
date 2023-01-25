@@ -1,0 +1,18 @@
+query CalculatorFields($productInputId: String) {
+  calculatorFields(productInputId: $productInputId) {
+    nodes {
+      id
+      order
+      type
+      name
+      label
+      operation
+      value
+      group
+      groupDetail
+      groupOrder
+      currency
+      canBeDeleted
+    }
+  }
+}

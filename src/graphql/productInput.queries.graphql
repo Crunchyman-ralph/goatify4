@@ -1,0 +1,161 @@
+query ProductInputs(
+  $skip: Int
+  $take: Int
+  $includeSubProducts: Boolean
+  $categoryId: String
+) {
+  productInputs(
+    skip: $skip
+    take: $take
+    includeSubProducts: $includeSubProducts
+    categoryId: $categoryId
+  ) {
+    total
+    nodes {
+      id_
+      customProductType
+      descriptionHtml
+      giftCard
+      handle
+      images {
+        altText
+        src
+      }
+      options
+      productType
+      requiresSellingPlan
+      seo {
+        description
+        title
+      }
+      standardizedProductType {
+        productTaxonomyNodeId
+      }
+      status
+      tags
+      templateSuffix
+      title
+      variants {
+        barcode
+        compareAtPrice
+        fulfillmentServiceId
+        harmonizedSystemCode
+        imageId
+        imageSrc
+        inventoryItem {
+          cost
+          tracked
+        }
+        inventoryManagement
+        inventoryPolicy
+        inventoryQuantities {
+          availableQuantity
+          locationId
+        }
+        mediaSrc
+        options
+        price
+        productId
+        requiresShipping
+        sku
+        taxCode
+        taxable
+        title
+        weight
+        weightUnit
+      }
+      vendor
+      creativeUrls
+      adCopies
+      categories {
+        id_
+        name
+      }
+      competitorUrls
+    }
+  }
+}
+
+query ProductInput($productInputId: String) {
+  productInput(id: $productInputId) {
+    id_
+    customProductType
+    descriptionHtml
+    giftCard
+    handle
+    images {
+      altText
+      src
+    }
+    options
+    productType
+    requiresSellingPlan
+    seo {
+      description
+      title
+    }
+    standardizedProductType {
+      productTaxonomyNodeId
+    }
+    status
+    tags
+    templateSuffix
+    title
+    variants {
+      barcode
+      compareAtPrice
+      fulfillmentServiceId
+      harmonizedSystemCode
+      imageId
+      imageSrc
+      inventoryItem {
+        cost
+        tracked
+      }
+      inventoryManagement
+      inventoryPolicy
+      inventoryQuantities {
+        availableQuantity
+        locationId
+      }
+      mediaSrc
+      options
+      price
+      productId
+      requiresShipping
+      sku
+      taxCode
+      taxable
+      title
+      weight
+      weightUnit
+    }
+    vendor
+    creativeUrls
+    adCopies
+    categories {
+      id_
+      name
+    }
+    competitorUrls
+  }
+}
+
+query ProductInputTitle($productInputId: String) {
+  productInput(id: $productInputId) {
+    title
+  }
+}
+
+query ProductInputsTitle($skip: Int, $take: Int, $includeSubProducts: Boolean) {
+  productInputs(
+    skip: $skip
+    take: $take
+    includeSubProducts: $includeSubProducts
+  ) {
+    nodes {
+      id_
+      title
+    }
+  }
+}

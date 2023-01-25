@@ -1,0 +1,21 @@
+query Categories($skip: Int, $take: Int) {
+  categories(skip: $skip, take: $take) {
+    nodes {
+      id_
+      name
+    }
+    total
+  }
+}
+query Category($categoryId: String) {
+  category(id: $categoryId) {
+    id_
+    name
+  }
+}
+
+query CategoryName($categoryId: String) {
+  category(id: $categoryId) {
+    name
+  }
+}
